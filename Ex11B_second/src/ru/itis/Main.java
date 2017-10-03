@@ -17,6 +17,7 @@ public class Main {
         for (int i = 1; i <= n; i++) {
             ctg *= 1/Math.tan(i);
             t += ctg;
+            //к сожалению, этот вариант не проходит для наших целей
         }
         System.out.println("Результат t = " + t);
     }
