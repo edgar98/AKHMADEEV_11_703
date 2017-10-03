@@ -23,6 +23,7 @@ public class Main {
             znam *= 2 * k;
             //прибавляем текущий член к сумме
             s3 += chisl/znam;
+            //те же замечания
         }
         System.out.println("Результат S3 = " + s3);
     }
