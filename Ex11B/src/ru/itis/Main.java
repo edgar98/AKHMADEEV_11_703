@@ -14,7 +14,7 @@ public class Main {
         for (int i = 1; i <= n; i++) {
             sin *= Math.sin(i);
             cos *= Math.cos(i);
-            t = cos/sin; //  не вижу суммы
+            t += cos/sin; //  не вижу суммы
         }
         System.out.println("Результат t = " + t);
     }
