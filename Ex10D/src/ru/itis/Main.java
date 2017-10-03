@@ -37,7 +37,7 @@ public class Main {
                 и прибавляем этот член к сумме
                  */
                 fakt1 *= k;
-                s4 += (double)chisl/fakt1;
+                s4 += (double)chisl/fakt1;//те же замечания
             }
         }
         System.out.println("Результат S4 = " + s4);
