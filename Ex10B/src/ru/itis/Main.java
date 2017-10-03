@@ -24,7 +24,7 @@ public class Main {
             //задаём знаменатель текущего члена
             znam = fakt*(4*k+1);
             //прибавляем текущий член к сумме
-            s2 += chisl/znam;
+            s2 += chisl/znam;    //те же замечания
         }
         System.out.println("Результат S2 = " + s2);
     }
