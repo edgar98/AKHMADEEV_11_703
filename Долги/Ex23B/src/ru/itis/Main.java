@@ -14,7 +14,7 @@ public class Main {
         int k = 2, f = 1;
         while (v >= a & v <= b) {
             summ += f * (v / Math.pow(2.0, k)) * (Math.cos(v * x) * Math.cos(v * x));
-            double t = v;
+            double t = v;   //корявенько...
             v += v0;
             v0 = t;
             f = -f;
