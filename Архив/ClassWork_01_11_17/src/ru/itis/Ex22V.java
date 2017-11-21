@@ -19,8 +19,10 @@ public class Ex22V {
                 vniz = false;
             }
         }
-        if (vniz) System.out.println("Массив отсортирован по убыванию");
+        if (vniz) System.out.println("Массив отсортирован по убыванию");   
+        //else
         if (vverh) System.out.println("Массив отсортирован по возрастанию");
+        //else
         if (!vniz & !vverh) System.out.println("Массив отсортирован никак");
     }
 }
