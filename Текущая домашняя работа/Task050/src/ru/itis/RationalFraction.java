@@ -11,15 +11,6 @@ public class RationalFraction {
         this.a = a;
         this.b = b;
     }
-
-    public void setA(int a) {
-        this.a = a;
-    }
-
-    public void setB(int b) {
-        this.b = b;
-    }
-
     void reduce() {
         for (int i = 1; i <= Math.abs(a) ; i++) {
             if (a % i == 0) {
