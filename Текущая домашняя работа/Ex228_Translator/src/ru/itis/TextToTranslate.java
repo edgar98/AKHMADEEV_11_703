@@ -1,22 +1,27 @@
 package ru.itis;
 
-import java.io.FileReader;
-import java.io.LineNumberReader;
+import java.io.*;
 
 public class TextToTranslate {
     String text;
     String translatedText;
+
+    public TextToTranslate() {
+        this.text = "";
+    }
 
     public void printInput() {
         System.out.println(text);
     }
 
     public void readText() throws Exception {
-        LineNumberReader reader = new LineNumberReader(new FileReader("Text.txt"));
+        FileReader fileReader = new FileReader("Text.txt");
+        LineNumberReader reader = new LineNumberReader(fileReader);
         String line;
         while ((line = reader.readLine()) != null) {
-            text = line;
+            text += line;
         }
+        fileReader.close();
     }
 
     public void Translate(Dictionary dictionary) {
@@ -43,10 +48,30 @@ public class TextToTranslate {
                 return (dictionaryLine[1]);
             }
         }
+        // добавить s в файл dictionary
+        addWordToDictionary(s);
         return s;
     }
 
+    private void addWordToDictionary(String s) {
+        File file = new File("dictionary.txt");
+        FileWriter fileWriter = null;
+        try {
+            fileWriter = new FileWriter(file,true);
+            fileWriter.write("\n" + s + " = *");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally{
+            try {
+                fileWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     public void printOutput() {
-        System.out.println(translatedText);
+        System.out.println("\n" + translatedText);
     }
 }
