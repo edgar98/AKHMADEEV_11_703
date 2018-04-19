@@ -22,7 +22,7 @@ public class MyScanner {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        if (currentByte == -1) return -1;
+        if (currentByte == -1) throw new NullPointerException();
 
         while (currentByte != (int) ' ') {
             out += (char)currentByte;
@@ -34,7 +34,7 @@ public class MyScanner {
                 e.printStackTrace();
             }
         }
-        if (out == " " || out == "") return -1;
+        if (out == " " || out == "") throw new NullPointerException();
         return Integer.parseInt(out);
     }
 }
